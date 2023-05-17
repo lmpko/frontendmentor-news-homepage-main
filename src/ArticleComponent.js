@@ -3,7 +3,7 @@ import React from 'react'
 
 const ArticleComponent = () => {
   return (
-    <section>
+    <section className='article'>
         <div className='article-img-container'></div>
         <h1>The Bright Future of Web 3.0?</h1>
         <div>
