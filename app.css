@@ -15,10 +15,15 @@ body{
     display: flex;
     justify-content: center;
     justify-items: center;
+    margin: 0;
 }
 
 p{
     font-size: .9375rem ;
+}
+
+main{
+    padding: .9375rem ;
 }
 
 nav{
@@ -30,6 +35,10 @@ nav{
 nav button{
     border: none;
     background-color: white;
+}
+
+nav button:hover{
+    cursor: pointer;
 }
 
 .article{
@@ -153,17 +162,36 @@ ul li:hover{
 }
 
 
-@media screen and (min-width: 768px){
-
-    .side-menu ul li{
+.side-menu ul li{
         display: block;
     }
 
-    .side-menu{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
+.side-menu{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    padding: 1.125rem 1.5625rem ;
+    z-index: 2;
+}
+
+.side-menu button{
+    align-self: flex-end;
+    background-color: white;
+    border: none;
+    margin-bottom: 1.5625rem ;
+}
+
+.side-menu button{
+    cursor: pointer;
+}
+    
+
+@media screen and (min-width: 768px){
 
     .article-img-container{
         background: url("/assets/images/image-web-3-desktop.jpg");
