@@ -1,17 +1,23 @@
-import React from 'react'
-import MenuComponent from './MenuComponent'
-import closeIMG from "/assets/images/icon-menu-close.svg"
+import React, { useContext } from 'react';
+import MenuComponent from './MenuComponent';
+import closeIMG from '/assets/images/icon-menu-close.svg';
+import { SideMenuContext } from './SideMenuContext';
 
 const SideMenuComponent = () => {
-  return (
-    <div className='side-menu'>
-      <button type="">
-        <img src={closeIMG} alt="close"/>
-      </button>
-      <MenuComponent/>
-    </div>
-      
-  )
-}
+  const { toggleSideMenu, setToggleSideMenu } = useContext(SideMenuContext);
 
-export default SideMenuComponent
+  const handleClick = () => {
+    setToggleSideMenu(false);
+  };
+
+  return (
+    <div className="side-menu">
+      <button type="button" onClick={handleClick}>
+        <img src={closeIMG} alt="close" />
+      </button>
+      <MenuComponent />
+    </div>
+  );
+};
+
+export default SideMenuComponent;
