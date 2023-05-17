@@ -6,6 +6,7 @@ import gamingIMG from "/assets/images/image-gaming-growth.jpg"
 const QuickNewsComponent = () => {
   return (
     <>
+    <div className='quick-news-section'>
         <div className='quick-news-container'>
             <img src={retroPcIMG} alt="retro-pcs" />
             <div className='quick-news-article'>
@@ -30,6 +31,7 @@ const QuickNewsComponent = () => {
                 <p>How the pandemic has sparked fresh opportunities.</p>
             </div>
         </div>
+    </div>
     </>
   )
 }
