@@ -11,12 +11,15 @@ const SideMenuComponent = () => {
   };
 
   return (
-    <div className="side-menu">
-      <button type="button" onClick={handleClick}>
-        <img src={closeIMG} alt="close" />
-      </button>
-      <MenuComponent />
+    <div className='overlay'>
+      <div className="side-menu">
+        <button type="button" onClick={handleClick}>
+          <img src={closeIMG} alt="close" />
+        </button>
+        <MenuComponent />
+      </div>
     </div>
+    
   );
 };
 

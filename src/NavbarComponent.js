@@ -13,10 +13,14 @@ const NavbarComponent = () => {
   };
 
   useEffect(() => {
+    
     const handleResize = () => {
       setShowElements(window.innerWidth <= 768);
-    };
 
+        if (window.innerWidth > 768) {
+          setToggleSideMenu(false);
+      }
+    };
     // Add event listener for window resize
     window.addEventListener('resize', handleResize);
 
